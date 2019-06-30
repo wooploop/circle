@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Circle Animation #2</title>
+<link rel="stylesheet" href="circle.css">
+<style>
+body {
+background-image:linear-gradient(to top right , rgb(23, 20, 173) ,rgb(192, 24, 24) );
+display:grid;
+place-items:center;
+background-repeat: no-repeat;
+height:894px;
+}
+
+.container{
+background-image:linear-gradient(to left , purple , indigo);
+width:150pt;
+height:150pt;
+border-radius:70%;
+animation:back 5s linear infinite ;
+position:absolute ;
+top:30%;
+left:40%;
+display:grid;
+place-items:center;
+}
+
+@keyframes back{
+100%{
+transform:rotatex(360deg) rotatey(360deg) rotateZ(360deg);
+}
+}
+
+.circle1 , .circle2{
+background-image:linear-gradient(to right , rgba(0,255,255,0.7),rgba(255,0,255,0.7));
+width:60pt;
+height:60pt;
+border-radius:50%;
+position:absolute ;
+}
+.circle1{
+animation:c1 3s linear infinite ;
+}
+
+@keyframes c1{
+100%{
+transform:rotateX(360deg) rotateZ(360deg) rotateY(360deg);
+}
+}
+
+.circle2{
+animation:c2 3s linear infinite;
+}
+
+@keyframes c2{
+100%{
+transform: rotateZ(360deg) rotateX(360deg);
+}
+}
+
+.circle3{
+background-image:linear-gradient(to left , rgba(0 , 255 ,255 , 0.3) , rgba(255 , 0 , 255 , 0.3));
+width:100pt;
+height:100pt;
+border-radius:50%;
+animation:c3 3s linear infinite;
+}
+@keyframes c3{
+100%{
+transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+}
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="circle3"></div> 
+</body>
+</html>
+
